@@ -1,0 +1,322 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.0 (Python 3.10.5 on darwin)" generated="20221024 11:45:34.497" rpa="false" schemaversion="3">
+<suite id="s1" name="Tests" source="/Users/nguyetnguyen/AutoTest/ui_robot_auto/Tests">
+<suite id="s1-s1" name="VerifyHomePage" source="/Users/nguyetnguyen/AutoTest/ui_robot_auto/Tests/VerifyHomePage.robot">
+<test id="s1-s1-t1" name="verify should navigate to statistic page when this menu is clicked" line="12">
+<kw name="start browser" library="BasePage" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${url}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20221024 11:45:34.724" level="INFO">Opening browser 'chrome' to base url 'https://fundingsocieties.com/'.</msg>
+<status status="PASS" starttime="20221024 11:45:34.723" endtime="20221024 11:45:39.251"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20221024 11:45:39.251" endtime="20221024 11:45:39.410"/>
+</kw>
+<status status="PASS" starttime="20221024 11:45:34.723" endtime="20221024 11:45:39.410"/>
+</kw>
+<kw name="Click Link" library="SeleniumLibrary">
+<arg>${StatisticMenu}</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<msg timestamp="20221024 11:45:39.412" level="INFO">Clicking link '(//nav//a[contains(text(),'Statistics')])[1]'.</msg>
+<status status="PASS" starttime="20221024 11:45:39.411" endtime="20221024 11:45:41.404"/>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>${StatisticPageContent}</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20221024 11:45:41.404" endtime="20221024 11:45:42.268"/>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<arg>${StatisticPageContent}</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20221024 11:45:42.279" level="INFO">Current page contains text 'Our Progress'.</msg>
+<status status="PASS" starttime="20221024 11:45:42.268" endtime="20221024 11:45:42.279"/>
+</kw>
+<kw name="finish test case" library="BasePage" type="TEARDOWN">
+<kw name="Close All Browsers" library="SeleniumLibrary">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" starttime="20221024 11:45:42.279" endtime="20221024 11:45:42.379"/>
+</kw>
+<status status="PASS" starttime="20221024 11:45:42.279" endtime="20221024 11:45:42.379"/>
+</kw>
+<status status="PASS" starttime="20221024 11:45:34.721" endtime="20221024 11:45:42.379"/>
+</test>
+<status status="PASS" starttime="20221024 11:45:34.519" endtime="20221024 11:45:42.380"/>
+</suite>
+<suite id="s1-s2" name="VerifyStatisticPage" source="/Users/nguyetnguyen/AutoTest/ui_robot_auto/Tests/VerifyStatisticPage.robot">
+<test id="s1-s2-t1" name="verify figures appeared in statistic page" line="13">
+<kw name="start browser" library="BasePage" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${url}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20221024 11:45:42.396" level="INFO">Opening browser 'chrome' to base url 'https://fundingsocieties.com/'.</msg>
+<status status="PASS" starttime="20221024 11:45:42.395" endtime="20221024 11:45:46.932"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20221024 11:45:46.932" endtime="20221024 11:45:47.078"/>
+</kw>
+<status status="PASS" starttime="20221024 11:45:42.394" endtime="20221024 11:45:47.078"/>
+</kw>
+<kw name="Click Link" library="SeleniumLibrary">
+<arg>${StatisticMenu}</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<msg timestamp="20221024 11:45:47.079" level="INFO">Clicking link '(//nav//a[contains(text(),'Statistics')])[1]'.</msg>
+<status status="PASS" starttime="20221024 11:45:47.079" endtime="20221024 11:45:48.923"/>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>${StatisticPageContent}</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20221024 11:45:48.923" endtime="20221024 11:45:49.999"/>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<arg>Total funded</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20221024 11:45:50.013" level="INFO">Current page contains text 'Total funded'.</msg>
+<status status="PASS" starttime="20221024 11:45:49.999" endtime="20221024 11:45:50.013"/>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<arg>No. of financing</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20221024 11:45:50.027" level="INFO">Current page contains text 'No. of financing'.</msg>
+<status status="PASS" starttime="20221024 11:45:50.013" endtime="20221024 11:45:50.027"/>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<arg>Default rate</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20221024 11:45:50.051" level="INFO">Current page contains text 'Default rate'.</msg>
+<status status="PASS" starttime="20221024 11:45:50.027" endtime="20221024 11:45:50.051"/>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<arg>Financing</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20221024 11:45:50.068" level="INFO">Current page contains text 'Financing'.</msg>
+<status status="PASS" starttime="20221024 11:45:50.051" endtime="20221024 11:45:50.068"/>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<arg>General</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20221024 11:45:50.081" level="INFO">Current page contains text 'General'.</msg>
+<status status="PASS" starttime="20221024 11:45:50.068" endtime="20221024 11:45:50.081"/>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<arg>Repayment</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20221024 11:45:50.096" level="INFO">Current page contains text 'Repayment'.</msg>
+<status status="PASS" starttime="20221024 11:45:50.082" endtime="20221024 11:45:50.096"/>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<arg>Disbursement</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20221024 11:45:50.110" level="INFO">Current page contains text 'Disbursement'.</msg>
+<status status="PASS" starttime="20221024 11:45:50.096" endtime="20221024 11:45:50.110"/>
+</kw>
+<kw name="finish test case" library="BasePage" type="TEARDOWN">
+<kw name="Close All Browsers" library="SeleniumLibrary">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" starttime="20221024 11:45:50.112" endtime="20221024 11:45:50.262"/>
+</kw>
+<status status="PASS" starttime="20221024 11:45:50.111" endtime="20221024 11:45:50.262"/>
+</kw>
+<status status="PASS" starttime="20221024 11:45:42.393" endtime="20221024 11:45:50.263"/>
+</test>
+<test id="s1-s2-t2" name="verify content of general tab" line="24">
+<kw name="start browser" library="BasePage" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${url}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20221024 11:45:50.265" level="INFO">Opening browser 'chrome' to base url 'https://fundingsocieties.com/'.</msg>
+<status status="PASS" starttime="20221024 11:45:50.265" endtime="20221024 11:45:54.744"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20221024 11:45:54.744" endtime="20221024 11:45:54.896"/>
+</kw>
+<status status="PASS" starttime="20221024 11:45:50.264" endtime="20221024 11:45:54.896"/>
+</kw>
+<kw name="go to statistic page" library="StasticsPage">
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${statistic_URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20221024 11:45:54.897" level="INFO">Opening url 'https://fundingsocieties.com/progress'</msg>
+<status status="PASS" starttime="20221024 11:45:54.897" endtime="20221024 11:45:56.857"/>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>${StatisticPageContent}</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20221024 11:45:56.858" endtime="20221024 11:45:57.733"/>
+</kw>
+<status status="PASS" starttime="20221024 11:45:54.897" endtime="20221024 11:45:57.733"/>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<arg>Total approved</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20221024 11:45:57.750" level="INFO">Current page contains text 'Total approved'.</msg>
+<status status="PASS" starttime="20221024 11:45:57.733" endtime="20221024 11:45:57.750"/>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<arg>Amount disbursed</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20221024 11:45:57.766" level="INFO">Current page contains text 'Amount disbursed'.</msg>
+<status status="PASS" starttime="20221024 11:45:57.750" endtime="20221024 11:45:57.767"/>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<arg>Default rate</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20221024 11:45:57.794" level="INFO">Current page contains text 'Default rate'.</msg>
+<status status="PASS" starttime="20221024 11:45:57.767" endtime="20221024 11:45:57.794"/>
+</kw>
+<kw name="finish test case" library="BasePage" type="TEARDOWN">
+<kw name="Close All Browsers" library="SeleniumLibrary">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" starttime="20221024 11:45:57.795" endtime="20221024 11:45:57.889"/>
+</kw>
+<status status="PASS" starttime="20221024 11:45:57.795" endtime="20221024 11:45:57.889"/>
+</kw>
+<status status="PASS" starttime="20221024 11:45:50.263" endtime="20221024 11:45:57.889"/>
+</test>
+<test id="s1-s2-t3" name="verify content of repayment tab" line="30">
+<kw name="start browser" library="BasePage" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${url}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20221024 11:45:57.892" level="INFO">Opening browser 'chrome' to base url 'https://fundingsocieties.com/'.</msg>
+<status status="PASS" starttime="20221024 11:45:57.891" endtime="20221024 11:46:02.238"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20221024 11:46:02.239" endtime="20221024 11:46:02.389"/>
+</kw>
+<status status="PASS" starttime="20221024 11:45:57.890" endtime="20221024 11:46:02.390"/>
+</kw>
+<kw name="go to statistic page" library="StasticsPage">
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${statistic_URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20221024 11:46:02.391" level="INFO">Opening url 'https://fundingsocieties.com/progress'</msg>
+<status status="PASS" starttime="20221024 11:46:02.390" endtime="20221024 11:46:04.766"/>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>${StatisticPageContent}</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20221024 11:46:04.766" endtime="20221024 11:46:05.202"/>
+</kw>
+<status status="PASS" starttime="20221024 11:46:02.390" endtime="20221024 11:46:05.203"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${RepaymentBtn}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20221024 11:46:05.204" level="INFO">Clicking button '//*[contains(@class,'progressGraphicContainer')]//button[contains(text(),'Repayment')]'.</msg>
+<status status="PASS" starttime="20221024 11:46:05.203" endtime="20221024 11:46:05.710"/>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>Breakdown of repaid components.</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20221024 11:46:05.711" endtime="20221024 11:46:05.732"/>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<arg>Breakdown of repaid components.</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20221024 11:46:05.742" level="INFO">Current page contains text 'Breakdown of repaid components.'.</msg>
+<status status="PASS" starttime="20221024 11:46:05.732" endtime="20221024 11:46:05.742"/>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<arg>Punctuality of repayment.</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20221024 11:46:05.760" level="INFO">Current page contains text 'Punctuality of repayment.'.</msg>
+<status status="PASS" starttime="20221024 11:46:05.743" endtime="20221024 11:46:05.760"/>
+</kw>
+<kw name="finish test case" library="BasePage" type="TEARDOWN">
+<kw name="Close All Browsers" library="SeleniumLibrary">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" starttime="20221024 11:46:05.761" endtime="20221024 11:46:05.871"/>
+</kw>
+<status status="PASS" starttime="20221024 11:46:05.761" endtime="20221024 11:46:05.871"/>
+</kw>
+<status status="PASS" starttime="20221024 11:45:57.890" endtime="20221024 11:46:05.871"/>
+</test>
+<test id="s1-s2-t4" name="verify content of disbursement tab" line="37">
+<kw name="start browser" library="BasePage" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${url}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20221024 11:46:05.876" level="INFO">Opening browser 'chrome' to base url 'https://fundingsocieties.com/'.</msg>
+<status status="PASS" starttime="20221024 11:46:05.875" endtime="20221024 11:46:10.493"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20221024 11:46:10.493" endtime="20221024 11:46:10.642"/>
+</kw>
+<status status="PASS" starttime="20221024 11:46:05.873" endtime="20221024 11:46:10.643"/>
+</kw>
+<kw name="go to statistic page" library="StasticsPage">
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${statistic_URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20221024 11:46:10.644" level="INFO">Opening url 'https://fundingsocieties.com/progress'</msg>
+<status status="PASS" starttime="20221024 11:46:10.643" endtime="20221024 11:46:13.090"/>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>${StatisticPageContent}</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20221024 11:46:13.090" endtime="20221024 11:46:13.949"/>
+</kw>
+<status status="PASS" starttime="20221024 11:46:10.643" endtime="20221024 11:46:13.949"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${DisbursementBtn}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20221024 11:46:13.950" level="INFO">Clicking button '//*[contains(@class,'progressGraphicContainer')]//button[contains(text(),'Disbursement')]'.</msg>
+<status status="PASS" starttime="20221024 11:46:13.949" endtime="20221024 11:46:14.074"/>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>Industry</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20221024 11:46:14.075" endtime="20221024 11:46:14.102"/>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<arg>Industry</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20221024 11:46:14.158" level="INFO">Current page contains text 'Industry'.</msg>
+<status status="PASS" starttime="20221024 11:46:14.102" endtime="20221024 11:46:14.158"/>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<arg>Breakdown by number of approved financing.</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20221024 11:46:14.183" level="INFO">Current page contains text 'Breakdown by number of approved financing.'.</msg>
+<status status="PASS" starttime="20221024 11:46:14.159" endtime="20221024 11:46:14.183"/>
+</kw>
+<kw name="finish test case" library="BasePage" type="TEARDOWN">
+<kw name="Close All Browsers" library="SeleniumLibrary">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" starttime="20221024 11:46:14.184" endtime="20221024 11:46:14.293"/>
+</kw>
+<status status="PASS" starttime="20221024 11:46:14.184" endtime="20221024 11:46:14.293"/>
+</kw>
+<status status="PASS" starttime="20221024 11:46:05.872" endtime="20221024 11:46:14.293"/>
+</test>
+<status status="PASS" starttime="20221024 11:45:42.382" endtime="20221024 11:46:14.294"/>
+</suite>
+<status status="PASS" starttime="20221024 11:45:34.498" endtime="20221024 11:46:14.296"/>
+</suite>
+<statistics>
+<total>
+<stat pass="5" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="5" fail="0" skip="0" id="s1" name="Tests">Tests</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1" name="VerifyHomePage">Tests.VerifyHomePage</stat>
+<stat pass="4" fail="0" skip="0" id="s1-s2" name="VerifyStatisticPage">Tests.VerifyStatisticPage</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
